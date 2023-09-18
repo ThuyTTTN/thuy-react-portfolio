@@ -124,7 +124,6 @@ const Home = () => {
             alt="Header Img"
             width="450"
             height="auto"
-            className={animationClass}
           />
         </div>
         {/* <TrackVisibility onChange={HandleVisibilityChange}>
