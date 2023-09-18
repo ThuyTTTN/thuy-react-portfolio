@@ -6,18 +6,24 @@ import watercolorBanner from "../assets/watercolor-splash-banner.png";
 const Container = styled.div`
   display: flex;
   padding: 2rem;
+  justify-content: space-between;
+  //   border: 1px solid red;
 `;
 const TextContainer = styled.div`
-  justify-content: space-between;
+  //   border: 1px solid red;
 `;
+
 const NameText = styled.div`
   font-size: 3.5rem;
   font-weight: 700;
   color: #c48f7f;
+  margin: 1rem 0;
 `;
 const TextTick = styled.div`
   font-size: 2rem;
   color: #eae9e5;
+  margin-left: 0.5rem;
+  margin-bottom: 10rem;
 `;
 const Title = styled.div`
   font-size: 3rem;
@@ -31,7 +37,6 @@ const StyledButton = styled.button`
   font-weight: 500;
   background-color: #eae9e5;
   border-radius: 15px;
-  margin: 2rem;
 `;
 
 const Home = () => {
@@ -107,13 +112,18 @@ const Home = () => {
           <Title>Hello, My name is</Title>
           <NameText>Thuy Nguyen</NameText>
           <TextTick>{text}</TextTick>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <StyledButton onClick={() => console.log("Send to contact page")}>
+              Let's Connect!
+            </StyledButton>
+          </div>
         </TextContainer>
         <div>
           <img
             src={watercolorBanner}
             alt="Header Img"
             width="450"
-            height="450"
+            height="auto"
             className={animationClass}
           />
         </div>
@@ -129,9 +139,6 @@ const Home = () => {
         )}
       </TrackVisibility> */}
       </Container>
-      <StyledButton onClick={() => console.log("Send to contact page")}>
-        Let's Connect!
-      </StyledButton>
     </>
   );
 };
