@@ -11,6 +11,7 @@ const Container = styled.div`
   display: flex;
   padding: 2rem;
   flex-direction: column;
+  max-width: 75rem;
 `;
 const Title = styled.div`
   font-size: 2.5rem;
@@ -67,8 +68,9 @@ const Projects = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
           gap: "1rem",
+          border: "1px solid yellow",
         }}
       >
         {listOfProjects.map((project, index) => {
