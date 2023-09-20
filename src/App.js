@@ -19,7 +19,7 @@ function App() {
       {/* <Home /> */}
       {/* <About /> */}
       {/* <ProjectCard /> */}
-      <Projects />
+      {/* <Projects /> */}
       {/* <Contact /> */}
     </Container>
   );
