@@ -4,16 +4,18 @@ import About from "./components/About";
 import ProjectCard from "./components/ProjectCard";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
       {/* <div className="App">Hello</div> */}
+      <NavBar />
       {/* <Home /> */}
-      {/* <About /> */}
+      <About />
       {/* <ProjectCard /> */}
       {/* <Projects /> */}
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }
