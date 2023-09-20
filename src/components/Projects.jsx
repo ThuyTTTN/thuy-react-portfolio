@@ -12,6 +12,7 @@ const Container = styled.div`
   margin-left: 3rem;
   margin-top: 1rem;
   flex-direction: column;
+  margin-left: 5rem;
 `;
 const Title = styled.div`
   font-size: 2.5rem;
