@@ -7,7 +7,8 @@ const Container = styled.div`
   margin-left: 3rem;
   margin-top: 1rem;
   flex-direction: column;
-  width: 70%;
+  width: 65%;
+  margin-left: 5rem;
 `;
 
 const Title = styled.div`
@@ -56,7 +57,7 @@ const StyledInputMessage = styled.textarea`
 const StyledButtonInput = styled.button`
   background-color: #c48f7f;
   color: #3d3d3d;
-  width: 100%;
+  width: 99%;
   height: 2.5rem;
   font-size: 18px;
   border-radius: 8px;
