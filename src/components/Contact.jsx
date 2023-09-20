@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  //   justify-content: space-between;
   padding: 2rem;
   flex-direction: column;
   width: 70%;
@@ -13,6 +12,13 @@ const Title = styled.div`
   font-size: 2.5rem;
   font-weight: 700;
   color: #f4ddd5;
+  margin-bottom: 2rem;
+`;
+
+const Text = styled.div`
+  font-size: 18px;
+  font-weight: 500;
+  color: #eae9e5;
   margin-bottom: 2rem;
 `;
 
@@ -34,8 +40,16 @@ const StyledInput = styled.input`
 const StyledTextarea = styled.label`
   color: #3d3d3d;
   display: flex;
-  //   flex-direction: column;
   width: 100%;
+`;
+
+const StyledInputMessage = styled.textarea`
+  background-color: rgba(244, 221, 213, 0.8);
+  height: 5rem;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 `;
 
 const StyledButton = styled.button`
@@ -52,15 +66,6 @@ const StyledButton = styled.button`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `;
 
-const StyledInputMessage = styled.textarea`
-  background-color: rgba(244, 221, 213, 0.8);
-  height: 5rem;
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-`;
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -73,6 +78,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
+      [name]: value,
     });
   };
 
@@ -88,6 +94,7 @@ const Contact = () => {
   return (
     <Container>
       <Title>Contact me</Title>
+      <Text>Let's Connect! Email me at ttruong06@gmail.com</Text>
       <form onSubmit={handleSubmit}>
         <div
           style={{
@@ -119,7 +126,7 @@ const Contact = () => {
             type="textarea"
             name="message"
             placeholder="Message"
-            value={formData.name}
+            value={formData.message}
             onChange={handleInputChange}
           />
         </StyledTextarea>
