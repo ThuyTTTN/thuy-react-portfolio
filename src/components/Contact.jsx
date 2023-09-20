@@ -24,7 +24,6 @@ const Text = styled.div`
 
 const StyledLabel = styled.label`
   color: #3d3d3d;
-  width: 100%;
 `;
 
 const StyledInput = styled.input`
@@ -33,20 +32,20 @@ const StyledInput = styled.input`
   border-radius: 8px;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  width: 12.5rem;
-  margin-right: 1.5rem;
+  width: 96.5%;
+  font-size: 16px;
 `;
 
 const StyledTextarea = styled.label`
   color: #3d3d3d;
-  display: flex;
-  width: 100%;
 `;
 
 const StyledInputMessage = styled.textarea`
   background-color: rgba(244, 221, 213, 0.8);
+  font-size: 16px;
   height: 5rem;
-  width: 100%;
+  width: 96.5%;
+  resize: none;
   border-radius: 8px;
   margin-bottom: 1rem;
   padding: 0.5rem;
@@ -55,15 +54,14 @@ const StyledInputMessage = styled.textarea`
 const StyledButton = styled.button`
   background-color: #c48f7f;
   color: #3d3d3d;
-  width: 30%;
+  width: 100%;
   height: 2.5rem;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 8px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 0.5rem;
+  box-sizing: border-box;
 `;
 
 const Contact = () => {
@@ -98,7 +96,7 @@ const Contact = () => {
       <form onSubmit={handleSubmit}>
         <div
           style={{
-            display: "flex",
+            width: "100%",
           }}
         >
           <StyledLabel>
@@ -119,18 +117,17 @@ const Contact = () => {
               onChange={handleInputChange}
             />
           </StyledLabel>
+          <StyledTextarea>
+            <StyledInputMessage
+              type="textarea"
+              name="message"
+              placeholder="Message"
+              value={formData.message}
+              onChange={handleInputChange}
+            />
+          </StyledTextarea>
+          <StyledButton type="submit">Submit</StyledButton>
         </div>
-
-        <StyledTextarea>
-          <StyledInputMessage
-            type="textarea"
-            name="message"
-            placeholder="Message"
-            value={formData.message}
-            onChange={handleInputChange}
-          />
-        </StyledTextarea>
-        <StyledButton type="submit">Submit</StyledButton>
       </form>
     </Container>
   );
