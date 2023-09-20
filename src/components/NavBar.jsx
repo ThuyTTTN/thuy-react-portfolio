@@ -8,6 +8,7 @@ const NavBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 1rem;
+  width: 4rem;
 `;
 
 const Logo = styled.div`
@@ -35,6 +36,7 @@ const NavBar = () => {
   return (
     <>
       <NavBarContainer>
+        {/* link logo to home page */}
         <Logo>
           <LogoText>TN</LogoText>
         </Logo>

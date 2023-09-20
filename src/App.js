@@ -5,18 +5,23 @@ import ProjectCard from "./components/ProjectCard";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+`;
 
 function App() {
   return (
-    <>
+    <Container>
       {/* <div className="App">Hello</div> */}
       <NavBar />
       {/* <Home /> */}
-      <About />
+      {/* <About /> */}
       {/* <ProjectCard /> */}
-      {/* <Projects /> */}
+      <Projects />
       {/* <Contact /> */}
-    </>
+    </Container>
   );
 }
 

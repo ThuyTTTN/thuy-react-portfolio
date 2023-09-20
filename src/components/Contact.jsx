@@ -4,7 +4,8 @@ import emailjs from "@emailjs/browser";
 
 const Container = styled.div`
   display: flex;
-  padding: 2rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
   flex-direction: column;
   width: 70%;
 `;

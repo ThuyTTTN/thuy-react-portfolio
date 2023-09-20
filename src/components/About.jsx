@@ -3,7 +3,8 @@ import watercolorBanner from "../assets/watercolor-splash-banner.png";
 
 const Container = styled.div`
   display: flex;
-  padding: 2rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
   flex-direction: column;
 `;
 const Title = styled.div`

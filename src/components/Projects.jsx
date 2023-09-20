@@ -9,15 +9,37 @@ import project6 from "../assets/project6-ogsnkrs416.jpg";
 
 const Container = styled.div`
   display: flex;
-  padding: 2rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
   flex-direction: column;
-  max-width: 75rem;
 `;
 const Title = styled.div`
   font-size: 2.5rem;
   font-weight: 700;
   color: #f4ddd5;
   margin-bottom: 2rem;
+`;
+
+const ProjectsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 50rem;
+
+  @media (min-width: 320px) {
+    width: 15rem;
+  }
+
+  @media (min-width: 425px) {
+    width: 15rem;
+  }
+
+  @media (min-width: 664px) {
+    width: 35rem;
+  }
+
+  @media (min-width: 960px) {
+    width: 50rem;
+  }
 `;
 
 const Projects = () => {
@@ -65,18 +87,11 @@ const Projects = () => {
   return (
     <Container>
       <Title>Projects</Title>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-          gap: "1rem",
-          border: "1px solid yellow",
-        }}
-      >
+      <ProjectsWrapper>
         {listOfProjects.map((project, index) => {
           return <ProjectCard key={index} {...project} />;
         })}
-      </div>
+      </ProjectsWrapper>
     </Container>
   );
 };
