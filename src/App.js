@@ -16,8 +16,8 @@ function App() {
     <Container>
       {/* <div className="App">Hello</div> */}
       <NavBar />
-      <Home />
-      {/* <About /> */}
+      {/* <Home /> */}
+      <About />
       {/* <ProjectCard /> */}
       {/* <Projects /> */}
       {/* <Contact /> */}
