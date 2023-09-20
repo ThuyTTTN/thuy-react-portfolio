@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-// import TrackVisibility from "react-on-screen";
 import watercolorBanner from "../assets/watercolor-splash-banner.png";
 
 const Container = styled.div`
   display: flex;
   padding: 2rem;
   justify-content: space-between;
-  //   border: 1px solid red;
 `;
-const TextContainer = styled.div`
-  //   border: 1px solid red;
-`;
+const TextContainer = styled.div``;
 
 const NameText = styled.div`
   font-size: 3.5rem;

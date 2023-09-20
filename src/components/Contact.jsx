@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import emailjs from "@emailjs/browser";
 
 const Container = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ const StyledInputMessage = styled.textarea`
   padding: 0.5rem;
 `;
 
-const StyledButton = styled.button`
+const StyledButtonInput = styled.button`
   background-color: #c48f7f;
   color: #3d3d3d;
   width: 100%;
@@ -65,68 +66,55 @@ const StyledButton = styled.button`
 `;
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [errorMessage, setErrorMessage] = useState("");
+  const form = useRef();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log("clicked submit", formData);
-    if (!errorMessage) {
-      setFormData({ [e.target.name]: e.target.value });
-      console.log("Form", formData);
-    }
+
+    emailjs
+      .sendForm(
+        "service_5lxqors",
+        "template_tui9xxr",
+        form.current,
+        "aU7pe_1L_69odFqCq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
     <Container>
       <Title>Contact me</Title>
       <Text>Let's Connect! Email me at ttruong06@gmail.com</Text>
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={sendEmail}>
         <div
           style={{
             width: "100%",
           }}
         >
           <StyledLabel>
-            <StyledInput
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleInputChange}
-            />
+            <StyledInput type="text" name="user_name" placeholder="Name" />
           </StyledLabel>
           <StyledLabel>
-            <StyledInput
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleInputChange}
-            />
+            <StyledInput type="email" name="user_email" placeholder="Email" />
           </StyledLabel>
           <StyledTextarea>
             <StyledInputMessage
               type="textarea"
               name="message"
               placeholder="Message"
-              value={formData.message}
-              onChange={handleInputChange}
             />
           </StyledTextarea>
-          <StyledButton type="submit">Submit</StyledButton>
+          <StyledButtonInput type="submit" value="Send">
+            Send
+          </StyledButtonInput>
         </div>
       </form>
     </Container>
