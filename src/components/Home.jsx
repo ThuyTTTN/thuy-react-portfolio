@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import watercolorBanner from "../assets/watercolor-splash-banner.png";
+import watercolor2 from "../assets/watercolor-splash2.png";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -55,6 +55,7 @@ const NameText = styled.div`
   font-weight: 700;
   color: #c48f7f;
   margin: 1rem 0;
+  text-shadow: 2px 2px 10px black;
 
   @media (min-width: 320px) {
     font-size: 2rem;
@@ -105,6 +106,8 @@ const StyledButton = styled.button`
   background-color: #eae9e5;
   border-radius: 15px;
   cursor: pointer;
+  box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.5);
+
   &:hover {
     transform: scale(1.05);
   }
@@ -113,6 +116,18 @@ const StyledButton = styled.button`
 const StyledImage = styled.img`
   width: 450px;
   height: auto;
+
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+
+  @keyframes mover {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50px);
+    }
+  }
 
   @media (min-width: 320px) {
     width: 200px;
@@ -127,7 +142,7 @@ const StyledImage = styled.img`
   }
 
   @media (min-width: 960px) {
-    width: 400px;
+    width: calc();
   }
 `;
 
@@ -195,14 +210,6 @@ const Home = () => {
     }
   };
 
-  const HandleVisibilityChange = (isVisible) => {
-    if (isVisible) {
-      setAnimationClass("animate_animated animate_zoomIn");
-    } else {
-      setAnimationClass("");
-    }
-  };
-
   return (
     <>
       <Container>
@@ -218,21 +225,9 @@ const Home = () => {
             </StyledButton>
           </StyledLink>
         </div>
-
         <div style={{ marginLeft: "3rem" }}>
-          <StyledImage src={watercolorBanner} alt="Header Img" />
+          <StyledImage src={watercolor2} alt="Header Img" />
         </div>
-        {/* <TrackVisibility onChange={HandleVisibilityChange}>
-        {({ isVisible }) => (
-          <img
-            src={watercolorBanner}
-            alt="Header Img"
-            width="450"
-            height="450"
-            className={animationClass}
-          />
-        )}
-      </TrackVisibility> */}
       </Container>
     </>
   );

@@ -81,13 +81,13 @@ const IconText = styled.span`
 
 const Icon = styled.img`
   width: 25px;
+}
 `;
 
 const NavBar = () => {
   return (
     <>
       <NavBarContainer>
-        {/* link logo to home page */}
         <LogoLink to="/">
           <LogoText>TN</LogoText>
         </LogoLink>

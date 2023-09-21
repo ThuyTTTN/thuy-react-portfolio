@@ -28,7 +28,7 @@ const StyledLabel = styled.label`
 `;
 
 const StyledInput = styled.input`
-  background-color: rgba(244, 221, 213, 0.8);
+  background-color: rgba(234, 233, 229, 0.9);
   height: 2.5rem;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -42,7 +42,7 @@ const StyledTextarea = styled.label`
 `;
 
 const StyledInputMessage = styled.textarea`
-  background-color: rgba(244, 221, 213, 0.8);
+  background-color: rgba(234, 233, 229, 0.9);
   font-size: 16px;
   height: 5rem;
   width: 96.5%;
@@ -60,9 +60,9 @@ const StyledButtonInput = styled.button`
   font-size: 18px;
   border-radius: 8px;
   font-weight: 700;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 0.5rem;
   box-sizing: border-box;
+  box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 `;
 
