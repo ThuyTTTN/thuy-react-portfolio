@@ -1,4 +1,5 @@
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -15,10 +16,16 @@ function App() {
     <Container>
       {/* <div className="App">Hello</div> */}
       <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       {/* <Home /> */}
       {/* <About /> */}
       {/* <Projects /> */}
-      <Contact />
+      {/* <Contact /> */}
     </Container>
   );
 }

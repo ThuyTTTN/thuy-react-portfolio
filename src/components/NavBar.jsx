@@ -2,6 +2,7 @@ import styled from "styled-components";
 import user from "../assets/user.png";
 import project from "../assets/project.png";
 import mail from "../assets/mail.png";
+import { Link } from "react-router-dom";
 
 const NavBarContainer = styled.div`
   display: flex;
@@ -10,12 +11,13 @@ const NavBarContainer = styled.div`
   width: 4rem;
 `;
 
-const Logo = styled.div`
+const LogoLink = styled(Link)`
   background-color: #c48f7f;
   width: 4rem;
   height: 4rem;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 `;
 
 const LogoText = styled.p`
@@ -31,7 +33,7 @@ const Space = styled.div`
   margin-top: 2rem;
 `;
 
-const IconWrapper = styled.div`
+const StyledLink = styled(Link)`
   position: relative;
   align-items: center;
   margin-left: 1.25rem;
@@ -50,7 +52,7 @@ const IconText = styled.span`
   opacity: 0;
   transition: all 0.4s ease-out;
 
-  ${IconWrapper}:hover & {
+  ${StyledLink}:hover & {
     opacity: 1;
     left: calc(4rem + 50%);
   }
@@ -65,24 +67,24 @@ const NavBar = () => {
     <>
       <NavBarContainer>
         {/* link logo to home page */}
-        <Logo>
+        <LogoLink to="/">
           <LogoText>TN</LogoText>
-        </Logo>
+        </LogoLink>
         <Space />
-        <IconWrapper>
+        <StyledLink to="/about">
           <Icon src={user} />
           <IconText>About</IconText>
-        </IconWrapper>
+        </StyledLink>
         <Space />
-        <IconWrapper>
+        <StyledLink to="/portfolio">
           <Icon src={project} />
           <IconText>Portfolio</IconText>
-        </IconWrapper>
+        </StyledLink>
         <Space />
-        <IconWrapper>
+        <StyledLink to="/contact">
           <Icon src={mail} />
           <IconText>Contact</IconText>
-        </IconWrapper>
+        </StyledLink>
       </NavBarContainer>
     </>
   );
