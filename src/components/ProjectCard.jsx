@@ -10,10 +10,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  &:hover {
-    transform: scale(1.05);
-  }
+  box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.5);
 `;
 
 const ButtonWrapper = styled.div`
@@ -34,7 +31,11 @@ const StyledButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px 2px rgba(61, 61, 61, 0.3);
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const CardTitle = styled.h4`
