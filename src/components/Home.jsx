@@ -1,16 +1,33 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import watercolorBanner from "../assets/watercolor-splash-banner.png";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
   margin-top: 2rem;
-  margin-left: 3rem;
   padding: 2rem;
   justify-content: space-between;
 `;
 
-const TextContainer = styled.div``;
+const TextContainer = styled.div`
+  height: 20rem;
+  @media (min-width: 320px) {
+    height: 10rem;
+  }
+
+  @media (min-width: 425px) {
+    height: 12rem;
+  }
+
+  @media (min-width: 664px) {
+    height: 15rem;
+  }
+
+  @media (min-width: 960px) {
+    height: 20rem;
+  }
+`;
 
 const Title = styled.div`
   font-size: 3rem;
@@ -87,6 +104,10 @@ const StyledButton = styled.button`
   font-weight: 500;
   background-color: #eae9e5;
   border-radius: 15px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const StyledImage = styled.img`
@@ -108,6 +129,12 @@ const StyledImage = styled.img`
   @media (min-width: 960px) {
     width: 400px;
   }
+`;
+
+const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
 `;
 
 const Home = () => {
@@ -179,16 +206,19 @@ const Home = () => {
   return (
     <>
       <Container>
-        <TextContainer>
-          <Title>Hello, My name is</Title>
-          <NameText>Thuy Nguyen</NameText>
-          <TextTick>{text}</TextTick>
-          <div style={{ display: "flex", justifyContent: "flex-start" }}>
+        <div style={{ flexDirection: "column" }}>
+          <TextContainer>
+            <Title>Hello, My name is</Title>
+            <NameText>Thuy Nguyen</NameText>
+            <TextTick>{text}</TextTick>
+          </TextContainer>
+          <StyledLink to="/contact">
             <StyledButton onClick={() => console.log("Send to contact page")}>
               Let's Connect!
             </StyledButton>
-          </div>
-        </TextContainer>
+          </StyledLink>
+        </div>
+
         <div style={{ marginLeft: "3rem" }}>
           <StyledImage src={watercolorBanner} alt="Header Img" />
         </div>

@@ -9,10 +9,9 @@ import project6 from "../assets/project6-ogsnkrs416.jpg";
 
 const Container = styled.div`
   display: flex;
-  margin-left: 3rem;
   margin-top: 1rem;
   flex-direction: column;
-  margin-left: 5rem;
+  margin-bottom: 3rem;
 `;
 const Title = styled.div`
   font-size: 2.5rem;

@@ -7,8 +7,24 @@ import { Link } from "react-router-dom";
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 1rem;
+  margin-right: 6rem;
   width: 4rem;
+
+  @media (min-width: 320px) {
+    margin-right: 4rem;
+  }
+
+  @media (min-width: 425px) {
+    margin-right: 4rem;
+  }
+
+  @media (min-width: 664px) {
+    margin-right: 5rem;
+  }
+
+  @media (min-width: 960px) {
+    margin-right: 6rem;
+  }
 `;
 
 const LogoLink = styled(Link)`
@@ -27,6 +43,7 @@ const LogoText = styled.p`
   font-size: 30px;
   justify-content: center;
   align-self: center;
+  cursor: pointer;
 `;
 
 const Space = styled.div`
@@ -52,6 +69,10 @@ const IconText = styled.span`
   opacity: 0;
   transition: all 0.4s ease-out;
 
+  @media (max-width: 700px) {
+    display: none;
+  }
+
   ${StyledLink}:hover & {
     opacity: 1;
     left: calc(4rem + 50%);
@@ -76,9 +97,9 @@ const NavBar = () => {
           <IconText>About</IconText>
         </StyledLink>
         <Space />
-        <StyledLink to="/portfolio">
+        <StyledLink to="/projects">
           <Icon src={project} />
-          <IconText>Portfolio</IconText>
+          <IconText>Projects</IconText>
         </StyledLink>
         <Space />
         <StyledLink to="/contact">

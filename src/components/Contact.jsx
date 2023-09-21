@@ -4,11 +4,9 @@ import emailjs from "@emailjs/browser";
 
 const Container = styled.div`
   display: flex;
-  margin-left: 3rem;
   margin-top: 1rem;
   flex-direction: column;
   width: 65%;
-  margin-left: 5rem;
 `;
 
 const Title = styled.div`
@@ -19,7 +17,7 @@ const Title = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #eae9e5;
   margin-bottom: 2rem;
@@ -65,6 +63,7 @@ const StyledButtonInput = styled.button`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 0.5rem;
   box-sizing: border-box;
+  cursor: pointer;
 `;
 
 const Contact = () => {
@@ -94,7 +93,7 @@ const Contact = () => {
   return (
     <Container>
       <Title>Contact me</Title>
-      <Text>Let's Connect! Email me at ttruong06@gmail.com</Text>
+      <Text>Let's Connect! </Text>
       <form ref={form} onSubmit={sendEmail}>
         <div
           style={{

@@ -3,7 +3,6 @@ import thuy from "../assets/thuy.jpg";
 
 const Container = styled.div`
   display: flex;
-  margin-left: 5rem;
   margin-top: 1rem;
   flex-direction: column;
 `;
