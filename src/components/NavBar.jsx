@@ -33,7 +33,6 @@ const Space = styled.div`
 
 const IconWrapper = styled.div`
   position: relative;
-  display: flex;
   align-items: center;
   margin-left: 1.25rem;
 `;
