@@ -7,11 +7,13 @@ const Container = styled.div`
   display: flex;
   margin-top: 2rem;
   padding: 2rem;
+  width: 60%;
   justify-content: space-between;
 `;
 
 const TextContainer = styled.div`
   height: 20rem;
+
   @media (min-width: 320px) {
     height: 10rem;
   }
@@ -21,7 +23,7 @@ const TextContainer = styled.div`
   }
 
   @media (min-width: 664px) {
-    height: 15rem;
+    height: 20rem;
   }
 
   @media (min-width: 960px) {
@@ -116,6 +118,8 @@ const StyledButton = styled.button`
 const StyledImage = styled.img`
   width: 450px;
   height: auto;
+  margin-left: 5rem;
+  margin-top: 1.5rem;
 
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
@@ -211,25 +215,21 @@ const Home = () => {
   };
 
   return (
-    <>
-      <Container>
-        <div style={{ flexDirection: "column" }}>
-          <TextContainer>
-            <Title>Hello, My name is</Title>
-            <NameText>Thuy Nguyen</NameText>
-            <TextTick>{text}</TextTick>
-          </TextContainer>
-          <StyledLink to="/contact">
-            <StyledButton onClick={() => console.log("Send to contact page")}>
-              Let's Connect!
-            </StyledButton>
-          </StyledLink>
-        </div>
-        <div style={{ marginLeft: "3rem" }}>
-          <StyledImage src={watercolor2} alt="Header Img" />
-        </div>
-      </Container>
-    </>
+    <Container>
+      <div style={{ flexDirection: "column" }}>
+        <TextContainer>
+          <Title>Hello, My name is</Title>
+          <NameText>Thuy Nguyen</NameText>
+          <TextTick>{text}</TextTick>
+        </TextContainer>
+        <StyledLink to="/contact">
+          <StyledButton>Let's Connect!</StyledButton>
+        </StyledLink>
+      </div>
+      <div style={{ marginLeft: "3rem" }}>
+        <StyledImage src={watercolor2} alt="Header Img" />
+      </div>
+    </Container>
   );
 };
 

@@ -6,6 +6,7 @@ const Container = styled.div`
   margin-top: 1rem;
   flex-direction: column;
 `;
+
 const Title = styled.div`
   font-size: 2.5rem;
   font-weight: 700;
@@ -15,14 +16,15 @@ const Title = styled.div`
 
 const Text = styled.div`
   margin-left: 2rem;
+  padding: 1rem;
   font-size: 1.2rem;
   color: #f4ddd5;
   line-height: 1.5;
-  width: 50%;
 
   @media (min-width: 300px) {
     font-size: 0.875rem;
     margin-left: 0;
+    padding: 0;
     width: 100%;
     margin-top: 1rem;
   }
@@ -30,18 +32,23 @@ const Text = styled.div`
   @media (min-width: 425px) {
     font-size: 0.875rem;
     margin-left: 0;
-    width: 100%;
+    padding: 0;
+    width: 70%;
     margin-top: 1rem;
   }
 
   @media (min-width: 664px) {
     font-size: 1rem;
     margin-left: 2rem;
+    padding: 0 1rem;
+    width: 50%;
   }
 
   @media (min-width: 890px) {
     font-size: 1.2rem;
     margin-left: 2rem;
+    padding: 0 1rem;
+    width: 50%;
   }
 `;
 
@@ -75,6 +82,7 @@ const ContentContainer = styled.div`
   @media (min-width: 325px) {
     flex-direction: column;
   }
+
   @media (min-width: 664px) {
     flex-direction: row;
   }

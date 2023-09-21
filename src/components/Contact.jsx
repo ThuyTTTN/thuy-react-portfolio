@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   margin-top: 1rem;
   flex-direction: column;
-  width: 65%;
+  width: 50%;
 `;
 
 const Title = styled.div`
