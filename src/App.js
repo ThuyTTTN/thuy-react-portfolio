@@ -16,6 +16,7 @@ function App() {
     <Container>
       {/* <div className="App">Hello</div> */}
       <NavBar />
+      <Home />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
