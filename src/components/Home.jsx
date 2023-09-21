@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   margin-top: 2rem;
   padding: 2rem;
-  width: 60%;
+  width: 70%;
   justify-content: space-between;
 `;
 
@@ -15,19 +15,25 @@ const TextContainer = styled.div`
   height: 20rem;
 
   @media (min-width: 320px) {
-    height: 10rem;
+    height: 9rem;
+    width: 100%;
   }
 
   @media (min-width: 425px) {
-    height: 12rem;
+    height: 10rem;
   }
 
   @media (min-width: 664px) {
-    height: 20rem;
+    height: 12rem;
   }
 
+  @media (min-width: 800px) {
+    height: 16rem;
+    width: 20rem;
+  }
   @media (min-width: 960px) {
-    height: 20rem;
+    height: 18rem;
+    width: 24rem;
   }
 `;
 
@@ -44,7 +50,7 @@ const Title = styled.div`
   }
 
   @media (min-width: 664px) {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 
   @media (min-width: 960px) {
@@ -61,6 +67,7 @@ const NameText = styled.div`
 
   @media (min-width: 320px) {
     font-size: 2rem;
+    margin: 0.3rem;
   }
 
   @media (min-width: 425px) {
@@ -68,10 +75,14 @@ const NameText = styled.div`
   }
 
   @media (min-width: 664px) {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
-  @media (min-width: 890px) {
+  @media (min-width: 800px) {
+    font-size: 2.75rem;
+  }
+
+  @media (min-width: 960px) {
     font-size: 3.5rem;
   }
 `;
@@ -91,7 +102,7 @@ const TextTick = styled.div`
   }
 
   @media (min-width: 664px) {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   @media (min-width: 890px) {
@@ -116,7 +127,7 @@ const StyledButton = styled.button`
 `;
 
 const StyledImage = styled.img`
-  width: 450px;
+  width: 350px;
   height: auto;
   margin-left: 5rem;
   margin-top: 1.5rem;
@@ -135,18 +146,24 @@ const StyledImage = styled.img`
 
   @media (min-width: 320px) {
     width: 200px;
+    margin-left: 1rem;
   }
 
   @media (min-width: 425px) {
     width: 250px;
+    margin-left: 1rem;
   }
 
   @media (min-width: 664px) {
+    width: 275px;
+  }
+
+  @media (min-width: 760px) {
     width: 300px;
   }
 
   @media (min-width: 960px) {
-    width: calc();
+    width: 350px;
   }
 `;
 
@@ -226,7 +243,7 @@ const Home = () => {
           <StyledButton>Let's Connect!</StyledButton>
         </StyledLink>
       </div>
-      <div style={{ marginLeft: "3rem" }}>
+      <div style={{ marginLeft: "1rem" }}>
         <StyledImage src={watercolor2} alt="Header Img" />
       </div>
     </Container>
