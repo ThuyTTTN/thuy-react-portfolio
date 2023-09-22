@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import user from "../assets/user.png";
-import project from "../assets/project.png";
 import project2 from "../assets/project-management.png";
 import mail from "../assets/mail.png";
 import cv from "../assets/cv.png";
