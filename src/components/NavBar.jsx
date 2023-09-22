@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import user from "../assets/user.png";
 import project from "../assets/project.png";
+import project2 from "../assets/project-management.png";
 import mail from "../assets/mail.png";
+import cv from "../assets/cv.png";
 import { Link } from "react-router-dom";
 
 const NavBarContainer = styled.div`
@@ -98,8 +100,13 @@ const NavBar = () => {
         </StyledLink>
         <Space />
         <StyledLink to="/projects">
-          <Icon src={project} />
+          <Icon src={project2} />
           <IconText>Projects</IconText>
+        </StyledLink>
+        <Space />
+        <StyledLink to="/resume">
+          <Icon src={cv} />
+          <IconText>Resume</IconText>
         </StyledLink>
         <Space />
         <StyledLink to="/contact">

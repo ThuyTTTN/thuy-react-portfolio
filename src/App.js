@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Resume from "./components/Resume";
 import NavBar from "./components/NavBar";
 import styled from "styled-components";
 
@@ -14,19 +15,16 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      {/* <div className="App">Hello</div> */}
       <NavBar />
-      <Home />
+      {/* <Home /> */}
+      {/* <Resume /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Projects /> */}
-      {/* <Contact /> */}
     </Container>
   );
 }
