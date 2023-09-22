@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import thuy from "../assets/thuy.jpg";
+import Footer from "./Footer";
 
 const Container = styled.div`
   display: flex;
@@ -111,6 +112,7 @@ const About = () => {
           future.
         </Text>
       </ContentContainer>
+      <Footer />
     </Container>
   );
 };

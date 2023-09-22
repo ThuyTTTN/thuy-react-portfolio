@@ -6,6 +6,7 @@ import project3 from "../assets/project3-416.png";
 import project4 from "../assets/project4-budget.png";
 import project5 from "../assets/project5-416.jpg";
 import project6 from "../assets/project6-ogsnkrs416.jpg";
+import Footer from "./Footer";
 
 const Container = styled.div`
   display: flex;
@@ -92,6 +93,7 @@ const Projects = () => {
           return <ProjectCard key={index} {...project} />;
         })}
       </ProjectsWrapper>
+      <Footer />
     </Container>
   );
 };

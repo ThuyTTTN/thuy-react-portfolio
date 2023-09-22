@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import Footer from "./Footer";
 
 const Container = styled.div`
   display: flex;
@@ -118,6 +119,7 @@ const Contact = () => {
           </StyledButtonInput>
         </div>
       </form>
+      <Footer />
     </Container>
   );
 };

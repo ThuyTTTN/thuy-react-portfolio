@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Footer from "./Footer";
 
 const Container = styled.div`
   display: flex;
@@ -133,6 +134,7 @@ const Resume = () => {
           })}
         </div>
       </Wrapper>
+      <Footer />
     </Container>
   );
 };
