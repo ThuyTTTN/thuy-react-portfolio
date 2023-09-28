@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/thuy-react-portfolio/static/css/main.240df6e8.css",
-    "main.js": "/thuy-react-portfolio/static/js/main.b941f1c4.js",
+    "main.js": "/thuy-react-portfolio/static/js/main.1d8d40b2.js",
     "static/js/787.ac756b4c.chunk.js": "/thuy-react-portfolio/static/js/787.ac756b4c.chunk.js",
     "static/media/watercolor-splash2.png": "/thuy-react-portfolio/static/media/watercolor-splash2.854d909794a47d819be0.png",
     "static/media/thuy.jpg": "/thuy-react-portfolio/static/media/thuy.99e7b456a02f916e8bc0.jpg",
     "static/media/project3-416.png": "/thuy-react-portfolio/static/media/project3-416.216e153d9a508fd02400.png",
+    "static/media/jokesterScreenshot.png": "/thuy-react-portfolio/static/media/jokesterScreenshot.3cc0813f96778ff94f0a.png",
     "static/media/project5-416.jpg": "/thuy-react-portfolio/static/media/project5-416.2bf835c45ab8dd328c0b.jpg",
     "static/media/project1-416.jpg": "/thuy-react-portfolio/static/media/project1-416.28d2ff29fb07c693bfea.jpg",
     "static/media/project4-budget.png": "/thuy-react-portfolio/static/media/project4-budget.ad68b2be4dd216d0393b.png",
     "static/media/project2-tech-blog.png": "/thuy-react-portfolio/static/media/project2-tech-blog.56834c588278a8eb7352.png",
     "index.html": "/thuy-react-portfolio/index.html",
     "main.240df6e8.css.map": "/thuy-react-portfolio/static/css/main.240df6e8.css.map",
-    "main.b941f1c4.js.map": "/thuy-react-portfolio/static/js/main.b941f1c4.js.map",
+    "main.1d8d40b2.js.map": "/thuy-react-portfolio/static/js/main.1d8d40b2.js.map",
     "787.ac756b4c.chunk.js.map": "/thuy-react-portfolio/static/js/787.ac756b4c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.240df6e8.css",
-    "static/js/main.b941f1c4.js"
+    "static/js/main.1d8d40b2.js"
   ]
 }
