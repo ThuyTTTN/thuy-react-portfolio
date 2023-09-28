@@ -6,6 +6,7 @@ import project3 from "../assets/project3-416.png";
 import project4 from "../assets/project4-budget.png";
 import project5 from "../assets/project5-416.jpg";
 import project6 from "../assets/project6-ogsnkrs416.jpg";
+import project7 from "../assets/jokesterScreenshot.png";
 import Footer from "./Footer";
 
 const Container = styled.div`
@@ -45,6 +46,12 @@ const ProjectsWrapper = styled.div`
 
 const Projects = () => {
   const listOfProjects = [
+    {
+      title: "Jokester",
+      description: "Mobile app with silly animals telling fun jokes",
+      imgUrl: project7,
+      gitLink: "https://github.com/ThuyTTTN/Jokester",
+    },
     {
       title: "OG SNKRS",
       description: "MERN stack E-commerce for sneaker enthusiast",
