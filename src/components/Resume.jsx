@@ -100,7 +100,7 @@ const Resume = () => {
     <Container>
       <Title>Resume </Title>
       <ButtonWrapper
-        href="https://1drv.ms/w/s!Aka643mjyMAQpQaZPaW1evtd59rc?e=zIy3mv"
+        href="https://1drv.ms/w/s!Aka643mjyMAQpQaZPaW1evtd59rc"
         target="_blank"
         rel="noopener noreferrer"
         variant="light"
