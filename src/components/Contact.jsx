@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import Footer from "./Footer";
@@ -67,8 +67,36 @@ const StyledButtonInput = styled.button`
   cursor: pointer;
 `;
 
+const StyledNotification = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background-color: #f4ddd5;
+  border-radius: 5px;
+  margin-bottom: 0.75rem;
+`;
+
+const NotificationText = styled.p`
+  display: flex;
+  align-items: center;
+  color: #3d3d3d;
+  background-color: #f4ddd5;
+  font-size: 1rem;
+  margin: 0.5rem;
+`;
+
+const NotificationButton = styled.button`
+  background-color: #f4ddd5;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+`;
+
 const Contact = () => {
   const form = useRef();
+  const [showNotification, setShowNotification] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -84,6 +112,8 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          setShowNotification(true);
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -95,6 +125,14 @@ const Contact = () => {
     <Container>
       <Title>Contact me</Title>
       <Text>Let's Connect! </Text>
+      {showNotification && (
+        <StyledNotification>
+          <NotificationText>Message sent successfully!</NotificationText>
+          <NotificationButton onClick={() => setShowNotification(false)}>
+            X
+          </NotificationButton>
+        </StyledNotification>
+      )}
       <form ref={form} onSubmit={sendEmail}>
         <div
           style={{
@@ -119,6 +157,7 @@ const Contact = () => {
           </StyledButtonInput>
         </div>
       </form>
+
       <Footer />
     </Container>
   );
